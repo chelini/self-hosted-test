@@ -4,10 +4,11 @@ name: Build and test
 on: [push, pull_request]
 
 jobs:
-  name: build and test
-  runs-on: self-hosted
-  steps:
-    - name: Build
-      run: cmake ./ && make
-    - name: Execute
-      run: ./app
+  build:
+    name: build and test
+    runs-on: self-hosted
+    steps:
+      - name: Build
+        run: cmake ./ && make
+      - name: Execute
+        run: ./app
