@@ -1,2 +1,6 @@
 # Use this YAML in your workflow file for each job
+name: Build and test
+
+on: [push, pull_request]
+
 runs-on: self-hosted
