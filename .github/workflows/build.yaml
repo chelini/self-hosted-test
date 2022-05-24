@@ -8,7 +8,11 @@ jobs:
     name: build and test
     runs-on: self-hosted
     steps:
+      - name: get the repo
+        uses: actions/checkout@v2
+        with:
+          path: 'template'
       - name: Build
-        run: cmake ./ && make
+        run: cd template && cmake ./ && make
       - name: Execute
         run: ./app
